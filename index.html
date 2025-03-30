@@ -110,7 +110,7 @@
     <div class="icons mb-1">
       <i class="bi bi-cup-straw"></i> <i class="bi bi-droplet-half"></i> <i class="bi bi-cup-straw"></i>
     </div>
-    <h1>Caroline's Juice Company</h1>
+    <h1>Caroline and Isa's Juice Company</h1>
     <div class="icons mt-1">
       <i class="bi bi-emoji-sunglasses"></i> <i class="bi bi-egg-fried"></i> <i class="bi bi-flower3"></i>
     </div>
@@ -134,23 +134,21 @@
       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
         <!-- Repeat this card structure for each smoothie -->
         <div class="col">
-          <div class="card"><div class="card-body">
-            <h5>Coco Verde <span class="best-seller">Best Seller</span></h5>
-            <p>kale, spinach, mango, banana, dates, coconut oil, coconut water</p>
-            <p class="price-options">Small (20oz) $4.50 | Medium (32oz) $6.50 | Large (40oz) $8.00</p>
-            <div class="position-relative d-inline-block">
-                <button class="btn btn-outline-success btn-sm details-btn">See Nutritional Details</button>
-                <div class="nutritional-info">
-                  <ul class="list-group list-group-flush small">
-                    <li class="list-group-item">Calories: 220 (Small), 280 (Medium), 340 (Large)</li>
-                    <li class="list-group-item">Fat: 9g</li>
-                    <li class="list-group-item">Sugar: 24g</li>
-                    <li class="list-group-item">Protein: 4g</li>
-                    <li class="list-group-item">Fiber: 5g</li>
-                  </ul>
-                </div>
-              </div> 
-          </div></div>
+            <div class="card">
+              <div class="card-body text-center">
+                <!-- 1. Smoothie Image -->
+                <img src="images/coco-verde.jpg" class="img-fluid mb-3" alt="Coco Verde Smoothie">
+          
+                <!-- 2. Smoothie Info -->
+                <h5>Coco Verde <span class="best-seller">Best Seller</span></h5>
+                <p>kale, spinach, mango, banana, dates, coconut oil, coconut water</p>
+                <p class="price-options">Small (20oz) $4.50 | Medium (32oz) $6.50 | Large (40oz) $8.00</p>
+          
+                <!-- 3. Nutrition Button triggers MODAL -->
+                <button class="btn btn-outline-success btn-sm details-btn" data-bs-toggle="modal" data-bs-target="#modal-coco-verde">See Nutritional Details</button>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="col">
           <div class="card"><div class="card-body">
@@ -269,21 +267,46 @@
   </footer>
 
   <!-- Coco Verde Modal -->
-<div class="modal fade" id="modal-coco-verde" tabindex="-1" aria-labelledby="modalLabelCocoVerde" aria-hidden="true">
+  <div class="modal fade" id="modal-coco-verde" tabindex="-1" aria-labelledby="modalLabelCocoVerde" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
-        <div class="modal-header">
+        <div class="modal-header bg-light">
           <h5 class="modal-title" id="modalLabelCocoVerde">Coco Verde - Nutritional Info</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <ul class="list-group">
-            <li class="list-group-item">Calories: 280</li>
-            <li class="list-group-item">Fat: 9g</li>
-            <li class="list-group-item">Sugar: 24g</li>
-            <li class="list-group-item">Protein: 4g</li>
-            <li class="list-group-item">Fiber: 5g</li>
-          </ul>
+          <h6 class="mb-3 text-center">Nutrition Info by Size</h6>
+          <div class="row text-center fw-bold bg-light py-2">
+            <div class="col">Size</div>
+            <div class="col">Calories</div>
+            <div class="col">Sugar</div>
+            <div class="col">Protein</div>
+            <div class="col">Fat</div>
+          </div>
+          <div class="row text-center py-1">
+            <div class="col">Small</div>
+            <div class="col">220</div>
+            <div class="col">18g</div>
+            <div class="col">3g</div>
+            <div class="col">5g</div>
+          </div>
+          <div class="row text-center py-1 bg-light">
+            <div class="col">Medium</div>
+            <div class="col">280</div>
+            <div class="col">24g</div>
+            <div class="col">4g</div>
+            <div class="col">9g</div>
+          </div>
+          <div class="row text-center py-1">
+            <div class="col">Large</div>
+            <div class="col">340</div>
+            <div class="col">30g</div>
+            <div class="col">5g</div>
+            <div class="col">12g</div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
         </div>
       </div>
     </div>
