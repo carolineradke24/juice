@@ -284,7 +284,7 @@
             <h5>Acai Smoothie Bowl</h5>
             <p>Pick any smoothie as the base, blended with acai and topped with fruit and granola</p>
             <p class="price-options">$10.00</p>
-            <button class="btn btn-outline-success btn-sm details-btn">See Nutritional Details</button>
+            <button class="btn btn-outline-success btn-sm" data-bs-toggle="modal" data-bs-target="#modal-acai">See Nutritional Details</button>
           </div></div>
         </div>
         
@@ -296,7 +296,7 @@
             <h5>Gluten-Free Oats Bowl</h5>
             <p>Oats soaked in our house cashew milk, served cold, choice of 2 toppings included</p>
             <p class="price-options">$7.50</p>
-            <button class="btn btn-outline-success btn-sm details-btn">See Nutritional Details</button>
+            <button class="btn btn-outline-success btn-sm" data-bs-toggle="modal" data-bs-target="#modal-oats">See Nutritional Details</button>
           </div></div>
         </div>
         
@@ -308,7 +308,7 @@
             <h5>Quinoa Bowl</h5>
             <p>Quinoa cooked in our house cashew milk, served cold, choice of 2 toppings included</p>
             <p class="price-options">$8.00</p>
-            <button class="btn btn-outline-success btn-sm details-btn">See Nutritional Details</button>
+            <button class="btn btn-outline-success btn-sm" data-bs-toggle="modal" data-bs-target="#modal-quinoa">See Nutritional Details</button>
           </div></div>
         </div>
 
@@ -320,7 +320,7 @@
             <h5>Combination Bowl</h5>
             <p>Combination of oats and quinoa, served cold, choice of 2 toppings included</p>
             <p class="price-options">$8.50</p>
-            <button class="btn btn-outline-success btn-sm details-btn">See Nutritional Details</button>
+            <button class="btn btn-outline-success btn-sm" data-bs-toggle="modal" data-bs-target="#modal-combination">See Nutritional Details</button>
           </div></div>
         </div>
 
@@ -332,7 +332,7 @@
             <h5>Vanilla Cashew Parfait</h5>
             <p>Vegan take on Greek yogurt, loaded with probiotics, topped with berries and granola</p>
             <p class="price-options">$6.50</p>
-            <button class="btn btn-outline-success btn-sm details-btn">See Nutritional Details</button>
+            <button class="btn btn-outline-success btn-sm" data-bs-toggle="modal" data-bs-target="#modal-parfait">See Nutritional Details</button>
           </div></div>
         </div>
 
@@ -344,7 +344,7 @@
             <h5>Chia Seed Pudding</h5>
             <p>Available in Strawberry, Chocolate, Vanilla Goji, and Vanilla Matcha flavors</p>
             <p class="price-options">$5.75</p>
-            <button class="btn btn-outline-success btn-sm details-btn">See Nutritional Details</button>
+            <button class="btn btn-outline-success btn-sm" data-bs-toggle="modal" data-bs-target="#modal-pudding">See Nutritional Details</button>
           </div></div>
         </div>
 
@@ -356,7 +356,7 @@
             <h5>House Granola</h5>
             <p>Our signature granola available in 16 oz containers</p>
             <p class="price-options">$6.00</p>
-            <button class="btn btn-outline-success btn-sm details-btn">See Nutritional Details</button>
+            <button class="btn btn-outline-success btn-sm" data-bs-toggle="modal" data-bs-target="#modal-granola">See Nutritional Details</button>
           </div></div>
         </div>
       </div>
@@ -773,6 +773,174 @@
             <div class="col">4g</div>
             <div class="col">4g</div>
           </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Acai Smoothie Bowl -->
+  <div class="modal fade" id="modal-acai" tabindex="-1" aria-labelledby="modalLabelAcaiBowl" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header bg-light">
+          <h5 class="modal-title" id="modalLabelAcaiBowl">Acai Smoothie Bowl - Nutritional Info</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <ul class="list-group list-group-flush text-left">
+            <li class="list-group-item"><strong>Calories:</strong> 420</li>
+            <li class="list-group-item"><strong>Sugar:</strong> 28g</li>
+            <li class="list-group-item"><strong>Protein:</strong> 5g</li>
+            <li class="list-group-item"><strong>Fat:</strong> 15g</li>
+            <li class="list-group-item"><strong>Fiber:</strong> 9g</li>
+          </ul>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Gluten-Free Oats Bowl -->
+  <div class="modal fade" id="modal-oats" tabindex="-1" aria-labelledby="modalLabelOatsBowl" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header bg-light">
+          <h5 class="modal-title" id="modalLabelOatsBowl">Gluten-Free Oats Bowl - Nutritional Info</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <ul class="list-group list-group-flush text-left">
+            <li class="list-group-item"><strong>Calories:</strong> 360</li>
+            <li class="list-group-item"><strong>Sugar:</strong> 14g</li>
+            <li class="list-group-item"><strong>Protein:</strong> 7g</li>
+            <li class="list-group-item"><strong>Fat:</strong> 10g</li>
+            <li class="list-group-item"><strong>Fiber:</strong> 7g</li>
+          </ul>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Quinoa Bowl -->
+  <div class="modal fade" id="modal-quinoa" tabindex="-1" aria-labelledby="modalLabelQuinoaBowl" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header bg-light">
+          <h5 class="modal-title" id="modalLabelQuinoaBowl">Quinoa Bowl - Nutritional Info</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <ul class="list-group list-group-flush text-left">
+            <li class="list-group-item"><strong>Calories:</strong> 390</li>
+            <li class="list-group-item"><strong>Sugar:</strong> 13g</li>
+            <li class="list-group-item"><strong>Protein:</strong> 9g</li>
+            <li class="list-group-item"><strong>Fat:</strong> 12g</li>
+            <li class="list-group-item"><strong>Fiber:</strong> 6g</li>
+          </ul>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Combination Bowl -->
+  <div class="modal fade" id="modal-combination" tabindex="-1" aria-labelledby="modalLabelCombinationBowl" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header bg-light">
+          <h5 class="modal-title" id="modalLabelCombinationBowl">Combination Bowl - Nutritional Info</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <ul class="list-group list-group-flush text-left">
+            <li class="list-group-item"><strong>Calories:</strong> 400</li>
+            <li class="list-group-item"><strong>Sugar:</strong> 16g</li>
+            <li class="list-group-item"><strong>Protein:</strong> 8g</li>
+            <li class="list-group-item"><strong>Fat:</strong> 11g</li>
+            <li class="list-group-item"><strong>Fiber:</strong> 8g</li>
+          </ul>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Vanilla Cashew Parfait -->
+  <div class="modal fade" id="modal-parfait" tabindex="-1" aria-labelledby="modalLabelParfait" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header bg-light">
+          <h5 class="modal-title" id="modalLabelParfait">Vanilla Cashew Parfait - Nutritional Info</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <ul class="list-group list-group-flush text-left">
+            <li class="list-group-item"><strong>Calories:</strong> 350</li>
+            <li class="list-group-item"><strong>Sugar:</strong> 18g</li>
+            <li class="list-group-item"><strong>Protein:</strong> 6g</li>
+            <li class="list-group-item"><strong>Fat:</strong> 14g</li>
+            <li class="list-group-item"><strong>Fiber:</strong> 4g</li>
+          </ul>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Chia Seed Pudding -->
+  <div class="modal fade" id="modal-pudding" tabindex="-1" aria-labelledby="modalLabelPudding" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header bg-light">
+          <h5 class="modal-title" id="modalLabelPudding">Chia Seed Pudding - Nutritional Info</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <ul class="list-group list-group-flush text-left">
+            <li class="list-group-item"><strong>Calories:</strong> 310</li>
+            <li class="list-group-item"><strong>Sugar:</strong> 10g</li>
+            <li class="list-group-item"><strong>Protein:</strong> 6g</li>
+            <li class="list-group-item"><strong>Fat:</strong> 17g</li>
+            <li class="list-group-item"><strong>Fiber:</strong> 10g</li>
+          </ul>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- House Granola -->
+  <div class="modal fade" id="modal-granola" tabindex="-1" aria-labelledby="modalLabelGranola" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header bg-light">
+          <h5 class="modal-title" id="modalLabelGranola">House Granola - Nutritional Info</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <ul class="list-group list-group-flush text-left">
+            <li class="list-group-item"><strong>Calories:</strong> 520</li>
+            <li class="list-group-item"><strong>Sugar:</strong> 20g</li>
+            <li class="list-group-item"><strong>Protein:</strong> 8g</li>
+            <li class="list-group-item"><strong>Fat:</strong> 24g</li>
+            <li class="list-group-item"><strong>Fiber:</strong> 7g</li>
+          </ul>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
