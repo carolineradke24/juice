@@ -5,14 +5,35 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>The Juice Laundry</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Lobster&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
   <style>
     body {
       padding-top: 45px;
       font-family: 'Segoe UI', sans-serif;
       background-color: #fdfdfb;
       color: #2d2d2d;
+    }
+    html {
+      scroll-padding-top: 80px;
+    }
+    .hero h1,
+    .about-title,
+    .logo-text,
+    .section-title,
+    .top-banner h1 {
+      font-family: 'Lobster', sans-serif;
+    }
+    .section-title,
+    .about-title,
+    nav a,
+    .top-green-bar a,
+    h2,
+    h3 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
     }
     .top-banner {
       background-color: #f1fdf5;
@@ -29,6 +50,18 @@
     .top-banner .icons {
       font-size: 1.5rem;
       color: #27ae60;
+    }
+    .btn-success {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+    }
+    .custom-toggle-btn {
+      font-size: 0.9rem;
+      border-radius: 8px;
+      justify-content: space-between;
+    }
+    .custom-toggle-btn i {
+      font-size: 0.8rem;
     }
     .hero {
       background: url('images/food.jpg') no-repeat center center;
@@ -53,9 +86,16 @@
     .hero h1 {
       position: relative;
       z-index: 2;
-      font-size: 3rem;
+      font-size: 4rem;
       font-weight: bold;
       color: #146e30;
+    }
+    .menu-toggle-wrapper {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      padding: 1rem;
     }
     .site-logo {
       filter: brightness(0);
@@ -177,15 +217,22 @@
         <h1 class="display-4 fw-bold">Our Menu</h1>
       </header>      
 
-  <nav class="text-center py-3">
-    <a href="#smoothies" class="btn btn-success mx-2">Superfood Smoothies</a>
-    <a href="#boosters" class="btn btn-success mx-2">Boosters</a>
-    <a href="#bowls" class="btn btn-success mx-2">Acai Bowls & More</a>
-  </nav>  
-
-  <main class="container py-5">
+      <div class="menu-toggle-wrapper">
+        <button class="btn btn-success btn-sm px-4 py-2 fw-semibold toggle-btn custom-toggle-btn" data-target="#smoothies">
+          Superfood Smoothies <i class="fas fa-plus"></i>
+        </button>
+        <button class="btn btn-success btn-sm px-4 py-2 fw-semibold toggle-btn custom-toggle-btn" data-target="#boosters">
+          Boosters <i class="fas fa-plus"></i>
+        </button>
+        <button class="btn btn-success btn-sm px-4 py-2 fw-semibold toggle-btn custom-toggle-btn" data-target="#bowls">
+          Acai Bowls & More <i class="fas fa-plus"></i>
+        </button>
+      </div>
+      
+      
+   <main class="container py-5">
     <!-- Superfood Smoothies --> 
-    <section class="menu-category" id="smoothies">
+    <section class="menu-category collapse-section" id="smoothies" style="display: none;">
         <div class="mb-4">
           <h2 class="display-5 fw-bold text-start">Superfood Smoothies</h2>
           <p class="lead fw-semibold text-start text-muted">Real Ingredients. Real Energy.</p>
@@ -204,7 +251,7 @@
             <div class="card-body text-center">
               <img src="images/414-coco-verde.jpg" class="img-fluid mb-3" alt="Coco Verde Smoothie" style="height: 300px; object-fit: cover; width: 100%;">
               <h5>Coco Verde <span class="best-seller">Best Seller</span></h5>
-              <p>kale, spinach, mango, banana, dates, coconut oil, coconut water</p>
+              <p><em>kale, spinach, mango, banana, dates, coconut oil, coconut water</em></p>
               <p class="price-options">S (20oz) $4.50 | M (32oz) $6.50 | L (40oz) $8.00</p>
               <button class="btn btn-outline-success btn-sm" data-bs-toggle="modal" data-bs-target="#modal-coco-verde">See Nutritional Details</button>
             </div>
@@ -218,7 +265,7 @@
             <div class="card-body text-center">
               <img src="images/415-cbj.jpg" class="img-fluid mb-3" alt="Bradley's CB&J" style="height: 300px; object-fit: cover; width: 100%;">
               <h5>Bradley's CB&J</h5>
-              <p>strawberry, banana, cashew butter, dates, dragonfruit, house cashew milk</p>
+              <p><em>banana, cashew butter, dates, dragonfruit, house cashew milk</em></p>
               <p class="price-options">S (20oz) $5.00 | M (32oz) $7.00 | L (40oz) $8.50</p>
               <button class="btn btn-outline-success btn-sm" data-bs-toggle="modal" data-bs-target="#modal-cb-j">See Nutritional Details</button>
             </div>
@@ -232,7 +279,7 @@
             <div class="card-body text-center">
               <img src="images/416-super.jpg" class="img-fluid mb-3" alt="Superman Smoothie" style="height: 300px; object-fit: cover; width: 100%;">
               <h5>Superman <span class="best-seller">Best Seller</span></h5>
-              <p>blueberries, goji berries, banana, dates, dragonfruit, house almond milk</p>
+              <p><em>blueberries, goji berries, banana, dates, dragonfruit, house almond milk</em></p>
               <p class="price-options">S (20oz) $5.20 | M (32oz) $7.40 | L (40oz) $8.70</p>
               <button class="btn btn-outline-success btn-sm" data-bs-toggle="modal" data-bs-target="#modal-superman">See Nutritional Details</button>
             </div>
@@ -246,7 +293,7 @@
               <div class="card-body text-center">
                 <img src="images/417-blaze.jpg" class="img-fluid mb-3" alt="The Blaze Smoothie" style="height: 300px; object-fit: cover; width: 100%;">
                 <h5>The Blaze</h5>
-                <p>strawberry, mango, banana, dates, ginger, cayenne, house cashew milk</p>
+                <p><em>strawberry, mango, banana, dates, ginger, cayenne, house cashew milk</em></p>
                 <p class="price-options">S (20oz) $4.80 | M (32oz) $7.00 | L (40oz) $8.50</p>
                 <button class="btn btn-outline-success btn-sm" data-bs-toggle="modal" data-bs-target="#modal-blaze">See Nutritional Details</button>
               </div>
@@ -260,7 +307,7 @@
               <div class="card-body text-center">
                 <img src="images/452-tropic-energy.jpg" class="img-fluid mb-3" alt="Tropic Energy" style="height: 300px; object-fit: cover; width: 100%;">
                 <h5>Tropic Energy</h5>
-                <p>mango, banana, dates, dragonfruit, <br /> brewed guayusa</p>
+                <p><em>mango, banana, dates, dragonfruit, <br /> brewed guayusa</em></p>
                 <p class="price-options">S (20oz) $4.60 | M (32oz) $6.80 | L (40oz) $8.20</p>
                 <button class="btn btn-outline-success btn-sm" data-bs-toggle="modal" data-bs-target="#modal-tropic-energy">See Nutritional Details</button>
               </div>
@@ -274,7 +321,7 @@
               <div class="card-body text-center">
                 <img src="images/CGL Fresh Strawberry Smoothie.jpg" class="img-fluid mb-3" alt="Basil Bomb Smoothie" style="height: 300px; object-fit: cover; width: 100%;">
                 <h5>Basil Bomb <span class="best-seller">Best Seller</span></h5>
-                <p>strawberry, banana, basil, dates, <br /> house almond milk</p>
+                <p><em>strawberry, banana, basil, dates, <br /> house almond milk</em></p>
                 <p class="price-options">S (20oz) $4.90 | M (32oz) $6.90 | L (40oz) $8.30</p>
                 <button class="btn btn-outline-success btn-sm" data-bs-toggle="modal" data-bs-target="#modal-basil-bomb">See Nutritional Details</button>
               </div>
@@ -288,7 +335,7 @@
               <div class="card-body text-center">
                 <img src="images/451-blended-brew.jpg" class="img-fluid mb-3" alt="Blended Brew Smoothie" style="height: 300px; object-fit: cover; width: 100%;">
                 <h5>Blended Brew</h5>
-                <p>banana, cashew butter, cold brew coffee, <br /> cacao (optional)</p>
+                <p><em>banana, cashew butter, cold brew coffee, <br /> cacao (optional)</em></p>
                 <p class="price-options">S (20oz) $5.10 | M (32oz) $7.20 | L (40oz) $8.60</p>
                 <button class="btn btn-outline-success btn-sm" data-bs-toggle="modal" data-bs-target="#modal-blended-brew">See Nutritional Details</button>
               </div>
@@ -302,7 +349,7 @@
               <div class="card-body text-center">
                 <img src="images/453-cacao-monster.jpg" class="img-fluid mb-3" alt="Cacao Monster Smoothie" style="height: 300px; object-fit: cover; width: 100%;">
                 <h5>Cacao Monster</h5>
-                <p>banana, cashew butter, cacao, house <br /> almond milk</p>
+                <p><em>banana, cashew butter, cacao, house <br /> almond milk</em></p>
                 <p class="price-options">S (20oz) $5.00 | M (32oz) $7.00 | L (40oz) $8.50</p>
                 <button class="btn btn-outline-success btn-sm" data-bs-toggle="modal" data-bs-target="#modal-cacao-monster">See Nutritional Details</button>
               </div>
@@ -316,7 +363,7 @@
               <div class="card-body text-center">
                 <img src="images/dragon-fruit-smoothie-4-of-10.jpg" class="img-fluid mb-3" alt="Kid Dynamite Smoothie" style="height: 300px; object-fit: cover; width: 100%;">
                 <h5>Kid Dynamite</h5>
-                <p>banana, dragonfruit, house <br /> cashew milk</p>
+                <p><em>banana, dragonfruit, house <br /> cashew milk</em></p>
                 <p class="price-options">S (20oz) $4.20 | M (32oz) $6.20 | L (40oz) $7.50</p>
                 <button class="btn btn-outline-success btn-sm" data-bs-toggle="modal" data-bs-target="#modal-kid-dynamite">See Nutritional Details</button>
               </div>
@@ -329,13 +376,21 @@
     </section>
 
     <!-- Boosters -->
-    <section class="menu-category" id="boosters">
-      <h2 class="section-title">Add a Booster</h2>
-      <p>Acai, Cacao, Chia Seeds, Aloe Vera, Hemp Protein, Coconut Oil, Spinach, Flax Seeds, Kale, Ginger, Matcha, Goji Berries, Vegan Probiotic, Wheatgrass, Maca</p>
+    <section class="menu-category collapse-section" id="boosters" style="display: none;">
+        <div class="mb-4">
+        <h2 class="display-5 fw-bold text-start">Add a Booster</h2>
+        <p class="lead fw-semibold text-start text-muted">Elevate Your Blend.</p>
+      </div>
+      <div class="mb-3">
+        <img src="images/ingredients.jpg" alt="Boosters" class="img-fluid rounded shadow" style="width: 100%; max-height: 500px; object-fit: cover;">
+      </div>
+      <hr style="height: 6px; background-color: #146e30; border: none; margin-top: 2rem; margin-bottom: 2rem;">     
+      <h2 class="display-7 fw-bold text-start">Little add-ons, big benefits. Choose from any of the following boosters.</h2> 
+        <p>Acai, Cacao, Chia Seeds, Aloe Vera, Hemp Protein, Coconut Oil, Spinach, Flax Seeds, Kale, Ginger, Matcha, Goji Berries, Vegan Probiotic, Wheatgrass, Maca</p>
     </section>
 
     <!-- Acai Bowls & More -->
-    <section class="menu-category" id="bowls">
+    <section class="menu-category collapse-section" id="bowls" style="display: none;">
         <div class="mb-4">
           <h2 class="display-5 fw-bold text-start">Acai Bowls & More</h2>
           <p class="lead fw-semibold text-start text-muted">Power Up Naturally.</p>
@@ -353,7 +408,7 @@
           <div class="card"><div class="card-body text-center">
             <img src="images/acai-smoothie-bowl-sq-1.jpg" class="img-fluid mb-3" alt="Acai Smoothie Bowl" style="height: 300px; object-fit: cover; width: 100%;">
             <h5>Acai Smoothie Bowl</h5>
-            <p>Pick any smoothie as the base, blended with acai and topped with fruit and granola</p>
+            <p><em>Pick any smoothie as the base, blended with acai and topped with fruit and granola</em></p>
             <p class="price-options">$10.00</p>
             <button class="btn btn-outline-success btn-sm" data-bs-toggle="modal" data-bs-target="#modal-acai">See Nutritional Details</button>
           </div></div>
@@ -365,7 +420,7 @@
           <div class="card"><div class="card-body text-center">
             <img src="images/Coconut-Berry-Oatmeal-Bowl-5-of-5-e1689573337507.jpg" class="img-fluid mb-3" alt="Gluten-Free Oats Bowl" style="height: 300px; object-fit: cover; width: 100%;">
             <h5>Gluten-Free Oats Bowl</h5>
-            <p>Oats soaked in our house cashew milk, served cold, choice of 2 toppings included</p>
+            <p><em>Oats soaked in our house cashew milk, served cold, choice of 2 toppings included</em></p>
             <p class="price-options">$7.50</p>
             <button class="btn btn-outline-success btn-sm" data-bs-toggle="modal" data-bs-target="#modal-oats">See Nutritional Details</button>
           </div></div>
@@ -377,7 +432,7 @@
           <div class="card"><div class="card-body text-center">
             <img src="images/quinoa-and-fruit-breakfast-bowl-Art-From-My-Table-Vertical-5.jpg" class="img-fluid mb-3" alt="Quinoa Bowl" style="height: 300px; object-fit: cover; width: 100%;">
             <h5>Quinoa Bowl</h5>
-            <p>Quinoa cooked in our house cashew milk, served cold, choice of 2 toppings included</p>
+            <p><em>Quinoa cooked in our house cashew milk, served cold, choice of 2 toppings included</em></p>
             <p class="price-options">$8.00</p>
             <button class="btn btn-outline-success btn-sm" data-bs-toggle="modal" data-bs-target="#modal-quinoa">See Nutritional Details</button>
           </div></div>
@@ -389,7 +444,7 @@
           <div class="card"><div class="card-body text-center">
             <img src="images/IMG_6524.jpg" class="img-fluid mb-3" alt="Combination Bowl" style="height: 300px; object-fit: cover; width: 100%;">
             <h5>Combination Bowl</h5>
-            <p>Combination of oats and quinoa, served cold, choice of 2 toppings included</p>
+            <p><em>Combination of oats and quinoa, served cold, choice of 2 toppings included</em></p>
             <p class="price-options">$8.50</p>
             <button class="btn btn-outline-success btn-sm" data-bs-toggle="modal" data-bs-target="#modal-combination">See Nutritional Details</button>
           </div></div>
@@ -401,7 +456,7 @@
           <div class="card"><div class="card-body text-center">
             <img src="images/Web-Body-Images-Running27-1068x801.jpg" class="img-fluid mb-3" alt="Vanilla Cashew Parfait" style="height: 300px; object-fit: cover; width: 100%;">
             <h5>Vanilla Cashew Parfait</h5>
-            <p>Vegan take on Greek yogurt, loaded with probiotics, topped with berries and granola</p>
+            <p><em>Vegan take on Greek yogurt, loaded with probiotics, topped with berries and granola</em></p>
             <p class="price-options">$6.50</p>
             <button class="btn btn-outline-success btn-sm" data-bs-toggle="modal" data-bs-target="#modal-parfait">See Nutritional Details</button>
           </div></div>
@@ -413,7 +468,7 @@
           <div class="card"><div class="card-body text-center">
             <img src="images/chia-pudding-angled-500x500.webp" class="img-fluid mb-3" alt="Chia Seed Pudding" style="height: 300px; object-fit: cover; width: 100%;">
             <h5>Chia Seed Pudding</h5>
-            <p>Available in Strawberry, Chocolate, Vanilla Goji, and Vanilla Matcha flavors</p>
+            <p><em>Available in Strawberry, Chocolate, Vanilla Goji, and Vanilla Matcha flavors</em></p>
             <p class="price-options">$5.75</p>
             <button class="btn btn-outline-success btn-sm" data-bs-toggle="modal" data-bs-target="#modal-pudding">See Nutritional Details</button>
           </div></div>
@@ -425,11 +480,35 @@
           <div class="card"><div class="card-body text-center">
             <img src="images/granola.jpg" class="img-fluid mb-3" alt="House Granola" style="height: 300px; object-fit: cover; width: 100%;">
             <h5>House Granola</h5>
-            <p>Our signature granola available in 16 oz containers</p>
+            <p><em>Our signature granola available in <br />16 oz containers</em></p>
             <p class="price-options">$6.00</p>
             <button class="btn btn-outline-success btn-sm" data-bs-toggle="modal" data-bs-target="#modal-granola">See Nutritional Details</button>
           </div></div>
         </div>
+
+         <!-- Chili with Cashew Cream -->
+
+         <div class="col">
+            <div class="card"><div class="card-body text-center">
+              <img src="images/chili.png" class="img-fluid mb-3" alt="Chili with Cashew Cream" style="height: 300px; object-fit: cover; width: 100%;">
+              <h5>Chili with Cashew Cream</h5>
+              <p><em>Delicious house chili with your choice of regular or jalapeno-lime cashew cream (select locations only)</em></p>
+              <p class="price-options">$8.50</p>
+              <button class="btn btn-outline-success btn-sm" data-bs-toggle="modal" data-bs-target="#modal-chili">See Nutritional Details</button>
+            </div></div>
+          </div>
+  
+          <!-- Kale Caesar -->
+  
+          <div class="col">
+            <div class="card"><div class="card-body text-center">
+              <img src="images/kalecaesar.png" class="img-fluid mb-3" alt="Kale Caesar" style="height: 300px; object-fit: cover; width: 100%;">
+              <h5>Kale Caesar</h5>
+              <p><em>Kale and cabbage blend with vegan dressing and parm (select locations and times only)</em></p>
+              <p class="price-options">$8.50</p>
+              <button class="btn btn-outline-success btn-sm" data-bs-toggle="modal" data-bs-target="#modal-caesar">See Nutritional Details</button>
+            </div></div>
+          </div>
       </div>
     </section>
   </main>
@@ -1024,8 +1103,77 @@
     </div>
   </div>
 
+  <!-- Chili with Cashew Cream -->
+  <div class="modal fade" id="modal-chili" tabindex="-1" aria-labelledby="modalLabelChili" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header bg-light">
+          <h5 class="modal-title" id="modalLabelChili">Chili with Cashew Cream - Nutritional Info</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <ul class="list-group list-group-flush text-left">
+            <li class="list-group-item"><strong>Calories:</strong> 400</li>
+            <li class="list-group-item"><strong>Sugar:</strong> 17g</li>
+            <li class="list-group-item"><strong>Protein:</strong> 13g</li>
+            <li class="list-group-item"><strong>Fat:</strong> 10g</li>
+            <li class="list-group-item"><strong>Fiber:</strong> 12g</li>
+          </ul>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Kale Caesar -->
+  <div class="modal fade" id="modal-caesar" tabindex="-1" aria-labelledby="modalLabelCaesar" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header bg-light">
+          <h5 class="modal-title" id="modalLabelCaesar">Kale Caesar - Nutritional Info</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <ul class="list-group list-group-flush text-left">
+            <li class="list-group-item"><strong>Calories:</strong> 320</li>
+            <li class="list-group-item"><strong>Sugar:</strong> 14g</li>
+            <li class="list-group-item"><strong>Protein:</strong> 9g</li>
+            <li class="list-group-item"><strong>Fat:</strong> 28g</li>
+            <li class="list-group-item"><strong>Fiber:</strong> 6g</li>
+          </ul>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    document.querySelectorAll('.toggle-btn').forEach(button => {
+      button.addEventListener('click', () => {
+        const target = document.querySelector(button.dataset.target);
+        const icon = button.querySelector('i');
+  
+        if (target.style.display === "none") {
+          document.querySelectorAll('.collapse-section').forEach(sec => sec.style.display = "none");
+          document.querySelectorAll('.toggle-btn i').forEach(i => i.className = "fas fa-plus");
+  
+          target.style.display = "block";
+          icon.className = "fas fa-minus";
+        } else {
+          target.style.display = "none";
+          icon.className = "fas fa-plus";
+        }
+      });
+    });
+  </script>
+  
 </body>
 
 </html>
