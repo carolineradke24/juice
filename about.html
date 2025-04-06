@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Juice Laundry</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fdfdfb;
+      color: #2d2d2d;
+    }
+    .top-banner {
+      background-color: #f1fdf5;
+      text-align: center;
+      padding: 0.5rem 0;
+      border-bottom: 2px solid #a2d5ac;
+    }
+    .top-banner h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #2ecc71;
+      margin-bottom: 0.5rem;
+    }
+    .top-banner .icons {
+      font-size: 1.5rem;
+      color: #27ae60;
+    }
+    .hero {
+      background: url('images/food.jpg') no-repeat center center;
+      background-size: cover;
+      color: white;
+      padding: 9rem 1rem;
+      text-align: center;
+      position: relative;
+    }
+    .hero::before {
+      content: "";
+      background: url('images/white-sketch.png') no-repeat center center;
+      background-size: contain;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 600px;
+      height: 300px;
+      z-index: 1;
+    }
+    .hero h1 {
+      position: relative;
+      z-index: 2;
+      font-size: 3rem;
+      font-weight: bold;
+      color: #146e30;
+    }
+    .site-logo {
+      filter: brightness(0);
+      position: absolute;
+      top: 38px;
+      left: 20px;
+      height: 60px;
+      z-index: 0;
+    }
+    .logo-link {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        z-index: 9999;
+    }
+    .site-logo {
+        height: 50px;
+    }
+    .section-title {
+      border-bottom: 3px solid #6ab04c;
+      display: inline-block;
+      padding-bottom: 0.5rem;
+      margin-bottom: 2rem;
+    }
+    .menu-category {
+      margin-bottom: 3rem;
+    }
+    .card {
+      border: 1px solid #e0f5e9;
+    }
+    .price-options {
+      font-size: 0.9rem;
+    }
+    .top-green-bar {
+      background-color: #146e30;
+      padding: 0.75rem 1rem;
+      display: flex;
+      justify-content: flex-end;
+      gap: 1.5rem;
+      font-weight: bold;
+    }
+    .top-green-bar a {
+      color: white;
+      text-decoration: none;
+      font-size: 1rem;
+    }
+    .top-green-bar a:hover {
+      text-decoration: underline;
+    }
+    .best-seller {
+      display: inline-block;
+      background-color: #f39c12;
+      color: white;
+      font-size: 0.75rem;
+      padding: 0.2rem 0.4rem;
+      border-radius: 4px;
+      margin-left: 0.5rem;
+    }
+    .details-btn {
+      margin-top: 0.5rem;
+    }
+    .footer {
+      text-align: center;
+      padding: 4rem 1rem;
+      background-color: #eafaf1;
+      margin-top: 3rem;
+    }
+    .badge-bar {
+      background-color: #2b2b2b;
+      color: #fff;
+      padding: 0.75rem;
+      text-align: center;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      font-size: 0.95rem;
+    }
+    .badge-bar span {
+      color: #2b2b2b;
+      background-color: #fff;
+      padding: 0.25rem 0.5rem;
+      margin-right: 0.5rem;
+      border-radius: 4px;
+      font-weight: bold;
+    }
+    .about-title {
+      font-weight: 700;
+      font-size: 2rem;
+      position: relative;
+      display: inline-block;
+    }
+    .about-title::after {
+      content: "";
+      display: block;
+      width: 300px;
+      height: 4px;
+      background-color: #14532d;
+      margin-top: 8px;
+      border-radius: 2px;
+    }
+  </style>
+</head>
+
+<body>
+    <nav class="top-green-bar">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="menu.html">Menu</a>
+      </nav>
+      
+      <header class="hero">
+        <a href="#" class="logo-link">
+          <img src="images/logo-small.png" alt="Juice Laundry Logo" class="site-logo">
+        </a>
+        <h1 class="display-4 fw-bold">About Us</h1>
+      </header>      
+
+      <div class="container my-5">
+        <div class="row align-items-center">
+
+          <div class="col-md-6">
+            <img src="images/ingredients.jpg" alt="Juice Laundry Ingredients" class="img-fluid rounded mb-3" />
+            <img src="images/farming.jpg" alt="Juice Laundry Farming" class="img-fluid rounded" />
+            <img src="images/cows.jpg" alt="Juice Laundry Cows" class="img-fluid rounded" />
+          </div>
+      
+          <div class="col-md-6">
+            <h3 class="about-title mb-4">Why We Exist</h3>
+            <p>
+              It's strange how we make a habit of regularly washing our clothes, yet we hardly worry about something far more important. Our bodies.
+            </p>
+            <p>
+              So why don't we? We're too busy, so we hit the nearest fast food restaurant before, during, and/or after work. We don't know how, so we pretend the produce section doesn't exist when we're out grocery shopping. We're misinformed, so we buy into the latest nutrition fad or dieting craze and hope for the best.
+            </p>
+            <p>
+              But there can be no more excuses. The supreme nutritional power of raw, organic fruits and vegetables – nature's greatest gift to our bodies – has never been more accessible. Yes, we are a business and we want to achieve great success. But our larger purpose (and, not coincidentally, our only chance at great success) is to improve the way everyone thinks about health, nutrition, and their bodies.
+            </p>
+            <p>
+              We also want to change what it means to be a transparent business – an oft-touted but rarely practiced concept. And that starts with our products. You will always know exactly what you are putting into your body when you choose to drink one of our juices or smoothies, or eat one of our soups or salads. True wellness is within reach, you just have to take it.
+            </p>
+          </div>
+        </div>
+      </div>
+      
