@@ -154,6 +154,50 @@
       margin-top: 8px;
       border-radius: 2px;
     }
+    .about-section {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 4rem 2rem;
+      position: relative;
+    }
+    .collage-container {
+      position: relative;
+      width: 550px;
+      height: 500px;
+      flex-shrink: 0;
+    }
+    .collage-img {
+      position: absolute;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      width: 320px;
+      height: auto;
+      object-fit: cover;
+    }
+    .img-1 {
+      top: 0;
+      left: 0;
+      z-index: 2;
+    }
+    .img-2 {
+      top: 140px;
+      right: 0;
+      z-index: 3;
+    }
+    .img-3 {
+      top: 300px;
+      left: 20px;
+      z-index: 1;
+    }
+    .about-text {
+      max-width: 700px;
+      margin-left: 8rem;
+    }
+    .about-text p {
+      font-size: 1.15rem;
+      line-height: 1.7;
+    }
   </style>
 </head>
 
@@ -171,30 +215,18 @@
         <h1 class="display-4 fw-bold">About Us</h1>
       </header>      
 
-      <div class="container my-5">
-        <div class="row align-items-center">
-
-          <div class="col-md-6">
-            <img src="images/ingredients.jpg" alt="Juice Laundry Ingredients" class="img-fluid rounded mb-3" />
-            <img src="images/farming.jpg" alt="Juice Laundry Farming" class="img-fluid rounded" />
-            <img src="images/cows.jpg" alt="Juice Laundry Cows" class="img-fluid rounded" />
-          </div>
+      <div class="about-section d-flex">
+        <div class="collage-container">
+          <img src="images/ingredients.jpg" alt="Ingredients" class="collage-img img-1">
+          <img src="images/farming.jpg" alt="Farming" class="collage-img img-2">
+          <img src="images/cows.jpg" alt="Cows" class="collage-img img-3">
+        </div>
       
-          <div class="col-md-6">
-            <h3 class="about-title mb-4">Why We Exist</h3>
-            <p>
-              It's strange how we make a habit of regularly washing our clothes, yet we hardly worry about something far more important. Our bodies.
-            </p>
-            <p>
-              So why don't we? We're too busy, so we hit the nearest fast food restaurant before, during, and/or after work. We don't know how, so we pretend the produce section doesn't exist when we're out grocery shopping. We're misinformed, so we buy into the latest nutrition fad or dieting craze and hope for the best.
-            </p>
-            <p>
-              But there can be no more excuses. The supreme nutritional power of raw, organic fruits and vegetables – nature's greatest gift to our bodies – has never been more accessible. Yes, we are a business and we want to achieve great success. But our larger purpose (and, not coincidentally, our only chance at great success) is to improve the way everyone thinks about health, nutrition, and their bodies.
-            </p>
-            <p>
-              We also want to change what it means to be a transparent business – an oft-touted but rarely practiced concept. And that starts with our products. You will always know exactly what you are putting into your body when you choose to drink one of our juices or smoothies, or eat one of our soups or salads. True wellness is within reach, you just have to take it.
-            </p>
-          </div>
+        <div class="about-text">
+          <h3 class="about-title mb-4">Why We Exist</h3>
+          <p>It's strange how we make a habit of regularly washing our clothes, yet we hardly worry about something far more important. Our bodies.</p>
+          <p>So why don't we? We're too busy, so we hit the nearest fast food restaurant before, during, and/or after work. We don't know how, so we pretend the produce section doesn't exist when we're out grocery shopping. We're misinformed, so we buy into the latest nutrition fad or dieting craze and hope for the best.</p>
+          <p>But there can be no more excuses. The supreme nutritional power of raw, organic fruits and vegetables – nature's greatest gift to our bodies – has never been more accessible. Yes, we are a business and we want to achieve great success. But our larger purpose (and, not coincidentally, our only chance at great success) is to improve the way everyone thinks about health, nutrition, and their bodies.</p>
+          <p>We also want to change what it means to be a transparent business – an oft-touted but rarely practiced concept. And that starts with our products. You will always know exactly what you are putting into your body when you choose to drink one of our juices or smoothies, or eat one of our soups or salads. True wellness is within reach, you just have to take it.</p>
         </div>
       </div>
-      
