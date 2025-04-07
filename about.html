@@ -31,22 +31,6 @@
       font-family: 'Poppins', sans-serif;
       font-weight: 600;
     }
-    .top-banner {
-      background-color: #f1fdf5;
-      text-align: center;
-      padding: 0.5rem 0;
-      border-bottom: 2px solid #a2d5ac;
-    }
-    .top-banner h1 {
-      font-size: 2.5rem;
-      font-weight: 700;
-      color: #2ecc71;
-      margin-bottom: 0.5rem;
-    }
-    .top-banner .icons {
-      font-size: 1.5rem;
-      color: #27ae60;
-    }
     .hero {
       background: url('images/food.jpg') no-repeat center center;
       background-size: cover;
@@ -92,7 +76,7 @@
         height: 50px;
     }
     .section-title {
-      border-bottom: 3px solid #6ab04c;
+      border-bottom: 3px solid #146e30;
       display: inline-block;
       padding-bottom: 0.5rem;
       margin-bottom: 2rem;
@@ -172,7 +156,7 @@
       display: block;
       width: 300px;
       height: 4px;
-      background-color: #14532d;
+      background-color: #146e30;
       margin-top: 8px;
       border-radius: 2px;
     }
@@ -218,7 +202,78 @@
     }
     .about-text p {
       font-size: 1.15rem;
-      line-height: 1.7;
+      line-height: 1.6;
+    }
+    .mission-banner {
+      background-color: #146e30;
+      color: white;
+      padding: 2rem 1rem;
+      font-style: italic;
+      font-size: 1.25rem;
+      line-height: 1.8;
+    }
+    .custom-footer {
+      background: url('images/footer.jpg') no-repeat center 90%/cover;
+      position: relative;
+      width: 100%;
+      color: white;
+    }
+    .footer-overlay {
+      background-color: rgba(20, 83, 45, 0.85);
+      padding: 2rem 1rem;
+    }
+    .footer-heading {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 600;
+    }
+    .footer-line {
+      width: 200px;
+      height: 3px;
+      background-color: white;
+      border: none;
+      margin: 0.5rem 0 1rem 0;
+    }
+    .footer-link {
+      color: white;
+      text-decoration: none;
+      font-family: 'Inter', sans-serif;
+    }
+    .footer-link:hover {
+      text-decoration: underline;
+    }
+    .footer-contact li,
+    .custom-footer li {
+      font-family: 'Inter', sans-serif;
+      margin-bottom: 0.5rem;
+    }
+    .footer-container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      max-width: 1500px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+    .footer-col {
+      flex: 1;
+      min-width: 150px;
+      margin: 0;
+    }
+    .locations-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 3rem;
+    }
+    .location {
+      flex: 1;
+      min-width: 160px;
+    }
+    .footer-bottom {
+      text-align: center;
+      padding-top: 40px;
+      padding-bottom: 0px;
     }
   </style>
 </head>
@@ -246,9 +301,154 @@
       
         <div class="about-text">
           <h3 class="about-title mb-4">Who We Are</h3>
-          <p>It's strange how we make a habit of regularly washing our clothes, yet we hardly worry about something far more important. Our bodies.</p>
-          <p>So why don't we? We're too busy, so we hit the nearest fast food restaurant before, during, and/or after work. We don't know how, so we pretend the produce section doesn't exist when we're out grocery shopping. We're misinformed, so we buy into the latest nutrition fad or dieting craze and hope for the best.</p>
-          <p>But there can be no more excuses. The supreme nutritional power of raw, organic fruits and vegetables – nature's greatest gift to our bodies – has never been more accessible. Yes, we are a business and we want to achieve great success. But our larger purpose (and, not coincidentally, our only chance at great success) is to improve the way everyone thinks about health, nutrition, and their bodies.</p>
-          <p>We also want to change what it means to be a transparent business – an oft-touted but rarely practiced concept. And that starts with our products. You will always know exactly what you are putting into your body when you choose to drink one of our juices or smoothies, or eat one of our soups or salads. True wellness is within reach, you just have to take it.</p>
+          <p font-size: 1.15rem; line-height: 1.6;>It's strange how we make a habit of regularly washing our clothes, yet we hardly worry about something far more important. Our bodies.</p>
+          <p font-size: 1.15rem; line-height: 1.6;>So why don't we? We're too busy, so we hit the nearest fast food restaurant before, during, and/or after work. We don't know how, so we pretend the produce section doesn't exist when we're out grocery shopping. We're misinformed, so we buy into the latest nutrition fad or dieting craze and hope for the best.</p>
+          <p font-size: 1.15rem; line-height: 1.6;>But there can be no more excuses. The supreme nutritional power of raw, organic fruits and vegetables – nature's greatest gift to our bodies – has never been more accessible. Yes, we are a business and we want to achieve great success. But our larger purpose (and, not coincidentally, our only chance at great success) is to improve the way everyone thinks about health, nutrition, and their bodies.</p>
+          <p font-size: 1.15rem; line-height: 1.6;>We also want to change what it means to be a transparent business – an oft-touted but rarely practiced concept. And that starts with our products. You will always know exactly what you are putting into your body when you choose to drink one of our juices or smoothies, or eat one of our soups or salads. True wellness is within reach, you just have to take it.</p>
         </div>
       </div>
+
+      <div class="mission-banner text-center">
+        <p><em>Since 2013, our mission is to inspire healthy, organic, powerful change.</em></p>
+      </div>
+
+      <section class="container my-5">
+        <h2 class="section-title text-center mb-4">Our Locations & Hours</h2>
+      
+        <!-- Location 1 -->
+        <div class="card location-card mb-4 p-4">
+            <div class="row align-items-center text-center">
+              <div class="col-md-4">
+                <h5>Historic Coca-Cola Building <br/> 722 Preston Ave Ste 105 <br /> Charlottesville VA 22903</h5>
+              </div>
+              <div class="col-md-4">
+                <h5>Monday – Friday: 8AM – 3PM<br>Saturday – Sunday: 8AM – 3PM</h5>
+              </div>
+              <div class="col-md-4">
+                <iframe 
+                  src="https://www.google.com/maps?q=722+Preston+Ave,+Charlottesville,+VA&output=embed"
+                  width="100%" height="200" style="border:0;" allowfullscreen=""
+                  loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+              </div>
+            </div>
+          </div>          
+      
+        <!-- Location 2 -->
+        <div class="card location-card mb-4 p-4">
+            <div class="row align-items-center text-center">
+              <div class="col-md-4">
+                <h5>Newcomb Dining Hall<br/> 180 McCormick Rd<br /> Charlottesville VA 22903</h5>
+              </div>
+              <div class="col-md-4">
+                <h5>Monday – Friday: 9AM – 4PM<br>Saturday – Sunday: Closed</h5>
+              </div>
+              <div class="col-md-4">
+                <iframe
+                src="https://www.google.com/maps?q=180+McCormick+Rd,+Charlottesville,+VA&output=embed"
+                width="100%" height="200" style="border:0;" allowfullscreen=""
+                loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+          </div>
+        </div>
+
+        <!-- Location 3 -->
+        <div class="card location-card mb-4 p-4">
+            <div class="row align-items-center text-center">
+              <div class="col-md-4">
+                <h5>UVA Aquatic & Fitness Center<br/> 450 Whitehead Rd<br /> Charlottesville VA 22904</h5>
+              </div>
+              <div class="col-md-4">
+                <h5>Monday – Friday: 9AM – 4PM<br>Saturday – Sunday: 10AM - 3PM</h5>
+              </div>
+              <div class="col-md-4">
+                <iframe
+                src="https://www.google.com/maps?q=450+Whitehead+Rd,+Charlottesville,+VA&output=embed"
+                width="100%" height="200" style="border:0;" allowfullscreen=""
+                loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <footer class="custom-footer">
+        <div class="footer-overlay">
+          <div class="container text-white py-5">
+            <div class="row justify-content-between">
+              <!-- Company -->
+              <div class="col-md-3">
+                <h5 class="footer-heading">Company</h5>
+                <hr class="footer-line" />
+                <ul class="list-unstyled">
+                  <p><a href="index.html" class="footer-link">Home</a><p>
+                  <p><a href="about.html" class="footer-link">About</a><p>
+                  <p><a href="menu.html" class="footer-link">Menu</a><p>
+                </ul>
+              </div>
+      
+              <!-- Contact -->
+              <div class="col-md-3">
+                <h5 class="footer-heading">Contact</h5>
+                <hr class="footer-line" />
+                <ul class="list-unstyled footer-contact">
+                  <p>Charlottesville, VA, USA<p>
+                  <p>+1 (434) 234-3044<p>
+                  <p>info@thejuicelaundry.com<p>
+                </ul>
+              </div>
+      
+              <!-- Locations -->
+              <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+              <div class="col-md-3 footer-col">
+                <h5 class="footer-heading">Locations & Hours</h5>
+                <hr class="footer-line" />
+                <div class="locations-wrapper">
+    
+                  <div class="location">
+                    <div>
+                        722 Preston Ave
+                        <a href="https://maps.google.com/?q=722+Preston+Ave+Ste+105+Charlottesville+VA" target="_blank" style="margin-left: 5px; color: white;">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </a>
+                    </div>
+                    <p></p>
+                    <p>Mon – Fri: 8AM – 3PM</p>
+                    <p>Sat – Sun: 8AM – 3PM</p>
+                  </div>
+    
+                  <div class="location">
+                    <div>
+                        180 McCormick Rd
+                        <a href="https://maps.google.com/?q=180+McCormick+Rd+Charlottesville+VA" target="_blank" style="margin-left: 5px; color: white;">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </a>
+                    </div>
+                    <p></p>
+                    <p>Mon – Fri: 9AM – 4PM</p>
+                    <p>Sat - Sun: Closed</p>
+                  </div>
+    
+                  <div class="location">
+                    <div>
+                        450 Whitehead Rd
+                        <a href="https://maps.google.com/?q=450+Whitehead+Rd+Charlottesville+VA" target="_blank" style="margin-left: 5px; color: white;">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </a>
+                    </div>
+                    <p></p>
+                    <p>Mon – Fri: 9AM – 4PM</p>
+                    <p>Sat – Sun: 10AM – 3PM</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <p class="text-center">
+              © 2025 The Juice Laundry. All rights reserved. | Designed with 💚 by Caroline Radke and Isabella Haug for clean living.
+            </p>
+          </div>
+        </div>
+      </footer>
