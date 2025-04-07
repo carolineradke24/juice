@@ -275,20 +275,46 @@
       padding-top: 40px;
       padding-bottom: 0px;
     }
+    .nav-brand-name {
+      color: white;
+      font-family: 'Lobster', cursive;
+      font-size: 1.5rem;
+    }
+    .top-green-bar.show-brand .nav-brand-name {
+      display: inline-block;
+    }
+    .scroll-to-top {
+      position: fixed;
+      bottom: 40px;
+      right: 30px;
+      font-size: 2.5rem;
+      color: #000000;
+      display: none;
+      z-index: 9999;
+      cursor: pointer;
+      transition: opacity 0.3s ease-in-out;
+    }
   </style>
 </head>
 
 <body>
-    <nav class="top-green-bar">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="menu.html">Menu</a>
+    <nav class="top-green-bar d-flex align-items-center justify-content-between px-4 py-2">
+        <div class="d-flex align-items-center">
+          <a href="index.html">
+            <img src="images/logo-small.png" alt="The Juice Laundry Logo" style="height: 40px;">
+          </a>
+          <span class="nav-brand-name ms-2">The Juice Laundry</span>
+        </div>
+      
+        <ul class="nav">
+          <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="menu.html">Menu</a></li>
+        </ul>
       </nav>
       
+      
       <header class="hero">
-        <a href="#" class="logo-link">
-          <img src="images/logo-small.png" alt="Juice Laundry Logo" class="site-logo">
-        </a>
         <h1 class="display-4 fw-bold">About Us</h1>
       </header>      
 
@@ -452,3 +478,29 @@
           </div>
         </div>
       </footer>
+
+      <a href="#" class="scroll-to-top" id="scrollToTopBtn">
+        <i class="bi bi-arrow-up-circle-fill"></i>
+      </a>      
+
+      <script>
+        const scrollBtn = document.getElementById("scrollToTopBtn");
+      
+        window.addEventListener("scroll", function () {
+          if (window.scrollY > 200) {
+            scrollBtn.style.display = "block";
+          } else {
+            scrollBtn.style.display = "none";
+          }
+        });
+      
+        scrollBtn.addEventListener("click", function (e) {
+          e.preventDefault();
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+      </script>
+      
+      
+      </body>
+      </html>
+      
