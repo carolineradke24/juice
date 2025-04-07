@@ -345,6 +345,53 @@
       padding: 4px 12px;
       transition: all 0.3s ease-in-out;
     }
+    .review-heading-banner {
+  background-color: #146e30;
+}
+
+.review-heading-banner h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.75rem;
+  font-weight: 600;
+}
+
+.review-carousel .quote {
+  font-style: italic;
+  font-size: 1.25rem;
+  color: #2d2d2d;
+}
+
+.review-carousel .customer {
+  font-weight: 300;
+  font-size: 1rem;
+  color: #2d2d2d;
+}
+.carousel-indicators [data-bs-target] {
+  background-color: #000000;
+}
+.carousel-indicators {
+  bottom: -50px;
+}
+.carousel-control-prev,
+.carousel-control-next {
+  opacity: 1;
+  font-size: 2.5rem;
+  color: black;
+}
+.carousel-control-prev:hover,
+.carousel-control-next:hover,
+.carousel-control-prev:focus,
+.carousel-control-next:focus {
+  color: black;
+  text-decoration: none;
+}
+
+.arrow-text {
+  font-size: 2rem;
+  font-weight: bold;
+  color: black;
+}
+
   </style>
 </head>
 
@@ -383,9 +430,9 @@
     </div>
   
     <div class="about-text">
-      <h3 class="about-title mb-4">Our Passion</h3>
+      <h3 class="about-title mb-2">Our Passion</h3>
       <p style="font-size: 1.15rem; line-height: 1.6;">The Juice Laundry was founded on the concept of keeping our bodies clean and healthy, starting with what we put into them. Raw, organic fruits and veggies are nature’s medicine and the foundation of preventative health care. Whether juiced, blended, or eaten whole, fresh produce is full of life-giving nutrients and enzymes. We choose to use 100% organic ingredients, 100% of the time, because the phrase “organic when possible” is often highly misleading. If we can’t find something organic on a given day, it won’t be on our menu. That’s our commitment to you, and to your health. Thanks for checking us out!</p>
-      <a href="about.html" class="btn btn-success mt-3" style="font-family: 'Poppins', sans-serif; font-size: 1.15rem; line-height: 1.6;">Read More</a>
+      <a href="about.html" class="btn btn-success mt-3" style="background-color: #146e30; border: none; color: white; font-family: 'Poppins', sans-serif; font-size: 1.15rem; line-height: 1.6;">Read More</a>
     </div>
   </div>
 
@@ -396,10 +443,10 @@
   <div class="container my-5">
     <div class="row align-items-center">
       <div class="col-md-6 pe-md-5">
-        <h3 class="about-title mb-4">Our Menu</h3>
+        <h3 class="about-title mb-2">Our Menu</h3>
         <p style="font-size: 1.15rem; line-height: 1.6;"><strong>Organic. Plant-Based. Powerful.</strong> Since 2013, we’ve been serving up healthy change with every smoothie, bowl, and juice.</p>
-        <a href="menu.html" class="btn btn-success mt-3" style="font-family: 'Poppins', sans-serif; font-size: 1.15rem; line-height: 1.6;">Explore Our Menu Offerings</a> <br>
-        <a href="images/brochure-inside.png" target="_blank" class="btn btn-success mt-3" style="font-family: 'Poppins', sans-serif; font-size: 1.15rem; line-height: 1.6;">View Our In-Store Brochure</a>          
+        <a href="menu.html" class="btn btn-success mt-3" style="background-color: #146e30; border: none; color: white; font-family: 'Poppins', sans-serif; font-size: 1.15rem; line-height: 1.6;">Explore Our Menu Offerings</a> <br>
+        <a href="images/brochure-inside.png" target="_blank" class="btn btn-success mt-3" style="background-color: #146e30; border: none; color: white; font-family: 'Poppins', sans-serif; font-size: 1.15rem; line-height: 1.6;">View Our In-Store Brochure</a>          
       </div>
   
       <div class="col-md-6 text-center">
@@ -407,6 +454,69 @@
       </div>
     </div>
   </div>
+
+  <div style="height: 4rem;"></div>
+
+<section class="review-heading-banner text-white text-center py-4">
+    <h2 class="mb-0">Don't just take our word for it... here is what our customers are saying!</h2>
+  </section>
+  
+  <section class="review-carousel py-5">
+    <div class="container text-center">
+      <div id="reviewCarousel" class="carousel slide" data-bs-ride="carousel">
+        
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#reviewCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#reviewCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#reviewCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#reviewCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+          <button type="button" data-bs-target="#reviewCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+          <button type="button" data-bs-target="#reviewCarousel" data-bs-slide-to="5" aria-label="Slide 6"></button>
+        </div>
+  
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <h3 class="quote">“Wonderful and beautiful place. Delicious vegan chili and a dazzling juice and smoothie menu.”</h3>
+            <p class="customer">— Paola (Charlottesville)</p>
+          </div>
+          <div class="carousel-item">
+            <h3 class="quote">“Best açaí bowl I’ve ever had! Great service and amazing food.”</h3>
+            <p class="customer">— Liberty (DC)</p>
+          </div>
+          <div class="carousel-item">
+            <h3 class="quote">“Their commitment to sustainable utensils and ware is something I hope most people respect.”</h3>
+            <p class="customer">— David (Charlottesville)</p>
+          </div>
+          <div class="carousel-item">
+            <h3 class="quote">“Obsessed! Friendly staff and very chill ambiance. Definitely will be a regular here!”</h3>
+            <p class="customer">— Rachel (Charlottesville)</p>
+          </div>
+          <div class="carousel-item">
+            <h3 class="quote">“Creamy Cashew. Cold Brew Mocha Latte. Rinse & Re-Beet. Rinse & Recharge. All are so amazing!”</h3>
+            <p class="customer">— Aud (DC)</p>
+          </div>
+          <div class="carousel-item">
+            <h3 class="quote">“I love this place! Everything I've had there has been so yummy. My body thanks me every time!”</h3>
+            <p class="customer">— Janelle (Charlottesville)</p>
+          </div>
+        </div>
+  
+        <button class="carousel-control-prev" type="button" data-bs-target="#reviewCarousel" data-bs-slide="prev">
+            <span class="arrow-text" aria-hidden="true">←</span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          
+          <button class="carousel-control-next" type="button" data-bs-target="#reviewCarousel" data-bs-slide="next">
+            <span class="arrow-text" aria-hidden="true">→</span>
+            <span class="visually-hidden">Next</span>
+          </button>
+  
+      </div>
+    </div>
+  </section>
+  
+  
+  
   
 
   <footer class="custom-footer">
@@ -512,7 +622,6 @@
     const scrollBtn = document.getElementById("scrollToTopBtn");
   
     window.addEventListener("scroll", function () {
-      // Show or hide the button
       if (window.scrollY > 200) {
         scrollBtn.style.display = "block";
       } else {
